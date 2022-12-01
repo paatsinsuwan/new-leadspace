@@ -22,19 +22,24 @@ import React, { useEffect, useState } from "react";
  * @returns {*} JSX for Homepage
  */
 const Home = () => {
-  const [loaded, setLoaded] = useState(false);
-
   useEffect(() => {}, []);
   return (
     <>
       <div className={`bx--grid`}>
         <div className={`bx--row`}>
           <div className={`bx--col`}>
-            <div className={`bx--typewriter-effect ${loaded ? "show" : ""}`}>
+            <div className={`bx--typewriter-effect`}>
               <h1 className={`bx--leadspace-title`}>
-                We make the world work better
-                <span className={`bx--blue`}>|</span>
+                <span className={`bx--text-black`}></span>
+                <span className={`bx--text-blue`}>|</span>
+                <span className={`bx--text-white`}>
+                  We make the world work better
+                </span>
               </h1>
+              <p className={`bx--leadspace-copy`}>
+                Description text that spans multiple lines, especially when
+                translated but maxed out at three lines
+              </p>
             </div>
           </div>
         </div>
