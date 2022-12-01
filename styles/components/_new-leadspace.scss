@@ -11,7 +11,7 @@
         span {
             &.bx--text-blue {
                 color: $blue-60;
-                animation: 700ms infinite cubic-bezier(0.2, 0.2, 0.38, 0.9) blinking;
+                animation: 1000ms infinite cubic-bezier(0.2, 0.2, 0.38, 0.9) blinking;
             }
             &.bx--text-black {
                 color: $text-01;
@@ -33,7 +33,13 @@
     from {
         opacity: 0;
     }
+    25% {
+        opacity: 1;
+    }
     50% {
+        opacity: 0;
+    }
+    75% {
         opacity: 1;
     }
     to {

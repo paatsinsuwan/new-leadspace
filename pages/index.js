@@ -31,7 +31,7 @@ const Home = () => {
           blackTextEle.textContent + whiteTextEle.textContent.charAt(0);
         whiteTextEle.textContent = whiteTextEle.textContent.substring(1);
         if (whiteTextEle.textContent.length == 0) clearInterval(intervalID);
-      }, 100);
+      }, 80);
     }, 1000);
   }, []);
   return (
