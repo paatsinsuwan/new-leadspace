@@ -1,4 +1,4 @@
-// import './index.scss';
+/* eslint-disable jsx-a11y/anchor-has-content */
 import React, {useEffect} from "react";
 
 const NewLeadspace = () => {
