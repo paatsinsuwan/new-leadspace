@@ -22,7 +22,18 @@ import React, { useEffect, useState } from "react";
  * @returns {*} JSX for Homepage
  */
 const Home = () => {
-  useEffect(() => {}, []);
+  useEffect(() => {
+    let whiteTextEle = document.getElementsByClassName("bx--text-white")[0];
+    let blackTextEle = document.getElementsByClassName("bx--text-black")[0];
+    setTimeout(() => {
+      let intervalID = setInterval(() => {
+        blackTextEle.textContent =
+          blackTextEle.textContent + whiteTextEle.textContent.charAt(0);
+        whiteTextEle.textContent = whiteTextEle.textContent.substring(1);
+        if (whiteTextEle.textContent.length == 0) clearInterval(intervalID);
+      }, 100);
+    }, 1000);
+  }, []);
   return (
     <>
       <div className={`bx--grid`}>
