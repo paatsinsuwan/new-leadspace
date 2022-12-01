@@ -14,17 +14,33 @@ import {
   CardSectionSimple,
 } from "@carbon/ibmdotcom-react";
 import { ArrowRight20 } from "@carbon/icons-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 /**
  * Homepage
  *
  * @returns {*} JSX for Homepage
  */
-const Home = () => (
-  <>
-    <div></div>
-  </>
-);
+const Home = () => {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {}, []);
+  return (
+    <>
+      <div className={`bx--grid`}>
+        <div className={`bx--row`}>
+          <div className={`bx--col`}>
+            <div className={`bx--typewriter-effect ${loaded ? "show" : ""}`}>
+              <h1 className={`bx--leadspace-title`}>
+                We make the world work better
+                <span className={`bx--blue`}>|</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
 export default Home;

@@ -1,0 +1,27 @@
+.bx--typewriter-effect {
+    &.show {
+        display: block;
+    }
+    h1 {
+        &.bx--leadspace-title {
+            @include carbon--type-style('display-03', true);
+        }
+        span {
+            &.bx--blue {
+                color: $blue-60;
+                animation: 700ms infinite cubic-bezier(0.2, 0.2, 0.38, 0.9) blinking;
+            }
+        }
+    }
+}
+@keyframes blinking {
+    from {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
