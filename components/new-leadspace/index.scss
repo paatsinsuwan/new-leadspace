@@ -1,0 +1,48 @@
+.bx--typewriter-effect {
+    &.show {
+        display: block;
+    }
+    h1 {
+        &.bx--leadspace-title {
+            @include carbon--type-style('display-03', true);
+            padding-top: $spacing-07;
+            padding-bottom: $spacing-12;
+        }
+        span {
+            &.bx--text-blue {
+                color: $blue-60;
+                animation: 1000ms infinite cubic-bezier(0.2, 0.2, 0.38, 0.9) blinking;
+            }
+            &.bx--text-black {
+                color: $text-01;
+            }
+            &.bx--text-white {
+                color: $ui-background;
+            }
+        }
+    }
+    p {
+        &.bx--leadspace-copy {
+            @include carbon--type-style('expressive-heading-03', true);
+            max-width: 640px;
+            padding-bottom: $spacing-07;
+        }
+    }
+}
+@keyframes blinking {
+    from {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
