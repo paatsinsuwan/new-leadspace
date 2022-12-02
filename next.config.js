@@ -7,7 +7,7 @@ module.exports = withSass({
   experimental: {
     basePath: process.env.BASE_PATH || "",
   },
-  assetPrefix: ".",
+  assetPrefix: "./docs",
   env: {
     ALTLANG_ROOT_PATH: process.env.ALTLANG_ROOT_PATH || "/",
     ENABLE_RTL: process.env.ENABLE_RTL || "false",
