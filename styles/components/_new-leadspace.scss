@@ -4,7 +4,7 @@
     }
     h1 {
         &.bx--leadspace-title {
-            @include carbon--type-style('display-03', true);
+            @include carbon--type-style('fluid-display-03', true);
             padding-top: $spacing-07;
             padding-bottom: $spacing-12;
         }
@@ -28,20 +28,41 @@
             padding-bottom: $spacing-07;
         }
     }
+    ol {
+        &.bx--buttongroup {
+            padding-top: 0;
+            padding-bottom: $spacing-07;
+            .bx--btn__icon {
+                transition: transform 1000ms cubic-bezier(0.2, 0.2, 0.38, 0.9);
+                transform : translateX('-8px');
+                &:hover {
+                    transform : translateX(0);
+                }
+            }
+        }
+    }
 }
+
+.bx--typewriter-effect-large {
+        h1 {
+            &.bx--leadspace-title {
+                @include carbon--type-style('fluid-display-04', true);
+        }    
+        }
+    }
 @keyframes blinking {
     from {
         opacity: 0;
     }
-    25% {
-        opacity: 1;
-    }
+    // 25% {
+    //     opacity: 1;
+    // }
     50% {
-        opacity: 0;
-    }
-    75% {
         opacity: 1;
     }
+    // 75% {
+    //     opacity: 1;
+    // }
     to {
         opacity: 0;
     }

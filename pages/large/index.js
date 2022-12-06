@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
-import "../styles/landing.scss";
+import "../../styles/landing.scss";
 import { Desktop, Pattern, Touch } from "@carbon/pictograms-react";
 import {
   TableOfContents,
@@ -14,7 +14,7 @@ import {
   CardSectionSimple,
 } from "@carbon/ibmdotcom-react";
 import { ArrowRight20 } from "@carbon/icons-react";
-import NewLeadspace from "../components/new-leadspace";
+import NewLeadspace from "../../components/new-leadspace";
 import React, { useEffect, useState } from "react";
 
 /**
@@ -35,6 +35,7 @@ const Home = () => {
       title={leadspaceTitle}
       copy={leadspaceCopy}
       ctas={leadspaceCTAs}
+      large={true}
     />
   );
 };
